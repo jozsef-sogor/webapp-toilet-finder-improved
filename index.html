@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Public Privy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Find the nearest public toilet in your area.">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Proza+Libre&display=swap" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Proza+Libre&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="body">
+
+
+  <!-- loader  -->
+  <div class="preloader-background">
+    <img class="logo" src="img/logo.png" alt="logo">
+    <!-- <img src="img/BCKG13.jpg" class="bckg_st"> -->
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- tabbar navigation -->
+  <nav class="tabbar">
+    <a href="#addToilet" onclick="showPage('addToilet')"><i class="large material-icons">add_circle</i>Add Toilet</a>
+    <a href="#map" onclick="showPage('map')"><i class="large material-icons">map</i>Map</a>
+    <a href="#safetyTips" onclick="showPage('safetyTips')"><i class="large material-icons">local_library</i>Safety tips</a>
+  </nav>
+
+
+  <!-- filters nav -->
+  <section id="filters">
+
+    <img id="disabledIcon" src="img/disabled.svg" alt="disabled" onclick="disabledOnClick()">
+    <img id="babyIcon" src="img/baby.svg" alt="baby" onclick="babyOnClick()">
+    <img id="freeIcon" src="img/free.svg" alt="free" onclick="freeOnClick()">
+
+  </section>
+
+  <!-- pages -->
+
+  <!-- map page -->
+  <section id="map" class="page">
+
+
+  </section> <!-- End of map page -->
+
+  <!-- addToilet page -->
+  <section id="addToilet" class="page">
+    <h1>Add New Toilet</h1>
+    <img src="img/BCKG12.jpg" alt="Background image for adding new locations," class="bckg_st">
+    <!-- <img id="bottomBackground" src="img/background1.svg" alt=".">
+    <img src="img/background2.svg" alt="." id="topBackground"> -->
+
+    <form class="col s12">
+      <div>
+        <div class="input-field col s6">
+          <input id="address" type="text">
+          <label for="address">Address</label>
+        </div>
+
+      </div>
+      <div>
+        <div class="input-field col s12 m6">
+          <select multiple class="icons" id="elem">
+            <option id="disabledOption" value="disabled" data-icon="img/disabled.svg">Disabled</option>
+            <option id="babyOption" value="baby" data-icon="img/baby.svg">Baby Room</option>
+            <option id="freeOption" value="free" data-icon="img/free.svg">Free</option>
+          </select>
+          <label>Please Select Toilet Type</label>
+        </div>
+      </div>
+    </form>
+
+    <!-- Modal Trigger -->
+    <button data-target="modal1" class="btn modal-trigger" onclick="createBathroom()">ADD PLACE</button>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <p>Thank you for helping to improve our app.<br>
+          New place added succesfully!</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#map" onclick="showPage('map')" class="modal-close waves-effect waves-light btn">GO TO MAP</a>
+      </div>
+    </div>
+  </section> <!-- End of addToilet page -->
+
+
+
+  <!-- safetyTips page -->
+  <section id="safetyTips" class="page">
+
+    <img src="img/bc1.jpg" alt="Bakcground for the Safety Tips page." class="bckg_st">
+    <!-- OR <img src="img/BCKG4.jpg" class="bckg_st"> -->
+
+    <div id="safetyTipsContent">
+      <!-- <img id="bottomBackground" src="img/background1.svg" alt=".">
+      <img src="img/background2.svg" alt="." id="topBackground"> -->
+
+      <!-- if we want logo
+<img src="img/logo.png" class=logost> -->
+
+      <img src="img/holder.png" alt="Toilet paper roll holder" style="width:330px" class="holder">
+      <div class="top">
+        <h2> Safety tips and etiquette <br> of public toilets use
+        </h2>
+        <br> <br> <br>
+
+      </div>
+      <div class="box effect3" id="tip5">
+        <h4>
+          - - - - - - - - - - - - -
+        </h4>
+        <h3>
+          <b>Dry your hands with paper towel,
+            dryers collect more bacteria. </b>
+        </h3>
+        <img src="img/tap.png" alt="Tap here" class="tap bounce">
+      </div>
+      <div class="box effect3" id="tip4">
+        <h4>
+          - - - - - - - - - - - - -
+        </h4>
+        <h3>
+          <b>Wash your hands in hot water <br>
+            (around 60 degrees).</b>
+        </h3>
+        <img src="img/tap.png" alt="Tap here" class="tap bounce">
+      </div>
+      <div class="box effect3" id="tip3">
+        <h4>
+          - - - - - - - - - - - - -
+        </h4>
+        <h3>
+          <b>Protect your hands with toilet paper when touching a flush.</b>
+        </h3>
+        <img src="img/tap.png" alt="Tap here" class="tap bounce">
+      </div>
+      <div class="box effect3" id="tip2">
+
+        <h4>
+          - - - - - - - - - - - - -
+        </h4>
+
+
+        <h3>
+          <b>Bring own protector <br>
+            and put it on the toilet.</b></h3>
+
+</h3>
+
+<img src="img/tap.png" class="tap bounce">
+</div>
+<div class="box effect3" id="tip1">
+<h4>
+  - - - - - - - - - - - - -
+</h4>
+<h3>
+  <b>Don’t put your things in the restroom floor.<br>
+    Hang it on the hook.</b>
+</h3>
+<img src="img/tap.png" class="tap bounce">
+</div>
+
+</div>
+  </section>
+
+  <!-- End safetyTips page -->
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+  <!-- Materialize Link -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- main js file -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Google Maps base -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3bB16-ieel0BRSzYUmRwqS7gYzXkFkJk&callback=initMap" type="text/javascript"></script>
+</body>
+
+</html>

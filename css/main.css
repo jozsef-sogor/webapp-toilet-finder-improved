@@ -1,0 +1,582 @@
+/* ---------- root variables ---------- */
+:root {
+  --green: rgb(38, 76, 89);
+  --light-green: rgb(172, 198, 201);
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --text-color-dark: #333;
+}
+
+/* ---------- general styling ---------- */
+html {
+  color: var(--text-color-dark);
+  font-family: Montserrat, sans-serif;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  font-weight: 200;
+}
+
+/* ---------- loader styling ---------- */
+/*Edward*/
+.preloader-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+}
+
+.preloader-wrapper.big {
+  width: 200px;
+  height: 200px;
+}
+
+.logo {
+  max-width: 40% !important;
+  width: 40% !important;
+  position: absolute;
+  margin: auto !important;
+  object-fit: scale-down !important;
+}
+
+.spinner-blue, .spinner-blue-only {
+  border-color: #4285f4;
+}
+
+.spinner-blue, .spinner-red {
+  border-color: #37dbd9;
+}
+
+.spinner-blue, .spinner-yellow {
+  border-color: #2600ca;
+}
+
+.spinner-blue, .spinner-green {
+  border-color: #00f4c4;
+}
+
+header {
+  display: none;
+}
+
+/* -------- Icon nav styling --------- */
+/*Ignas*/
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+  display: block;
+  font-size: 24px;
+  height: 1px;
+  line-height: 3px;
+  color: blue;
+}
+
+nav {
+  height: 67px;
+  line-height: 56px;
+}
+
+/* --------- Center me button styling --------- */
+/*Ignas*/
+.centerMe {
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  cursor: pointer;
+  margin-bottom: 22px;
+  text-align: center;
+  color: rgb(25, 25, 25);
+  line-height: 38px;
+  padding-left: 5px;
+  padding-right: 5px;
+  z-index: 99;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  bottom: 50vh;
+  transition: .1s;
+}
+
+/*Jozsef*/
+.centerMe:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 60px;
+  height: 60px;
+  right: 5px;
+  bottom: calc(50vh - 5px);
+}
+
+/* --------- Filters Styling --------- */
+/*Edward, Kornelia*/
+#filters {
+  bottom: 67px;
+  position: fixed;
+  width: 100% !important;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px 15px 0 0;
+  background-color: #fff;
+  z-index: 1;
+  padding: 1.55em;
+}
+
+#disabledIcon, #babyIcon, #freeIcon {
+  opacity: .4;
+  transition: .4s;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.disabledImg {
+  opacity: .4;
+}
+
+.babyImg {
+  opacity: .4;
+}
+
+.freeImg {
+  opacity: .4;
+}
+
+/*Edward, Jozsef*/
+.filterModal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 0fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 23px;
+}
+
+.filterModal ul {
+  display: flex;
+  justify-content: end;
+  margin: auto;
+}
+
+.filterModal ul li {
+  padding: 5px;
+}
+
+/* --------- */
+form {
+  margin-top: 6rem;
+}
+
+body {
+  margin: 0;
+}
+
+#map {
+  height: 100vh;
+  padding, margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-family: 'Proza Libre', sans-serif;
+}
+
+#bottomBackground {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  z-index: -1;
+  width: 40%;
+}
+
+#topBackground {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 60%;
+}
+
+h2 {
+  color: #1F53FF;
+  font-size: 16px;
+  font-family: 'Proza Libre', sans-serif;
+  text-align: center;
+  width: 70%;
+  padding-top: 60px;
+  margin: 0;
+}
+
+h3 {
+  color: SlateGrey;
+  font-size: 15px;
+  font-family: 'Proza Libre', sans-serif;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#up {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#navP strong {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+#navP {
+  margin: auto;
+}
+
+/* --------- add toilet input field styling --------- */
+/*Ignas*/
+.input-field {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #0000ff;
+  -webkit-box-shadow: 0 1px 0 0 #0000ff;
+  box-shadow: 0 1px 0 0 #0000ff;
+}
+
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:not(.browser-default):focus:not([readonly])+label,
+input[type=password]:not(.browser-default):focus:not([readonly])+label,
+input[type=email]:not(.browser-default):focus:not([readonly])+label,
+input[type=url]:not(.browser-default):focus:not([readonly])+label,
+input[type=time]:not(.browser-default):focus:not([readonly])+label,
+input[type=date]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime]:not(.browser-default):focus:not([readonly])+label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,
+input[type=tel]:not(.browser-default):focus:not([readonly])+label,
+input[type=number]:not(.browser-default):focus:not([readonly])+label,
+input[type=search]:not(.browser-default):focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: #0000ff;
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #0000ff;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before {
+  border-right: 2px solid #0000ff;
+  border-bottom: 2px solid #0000ff;
+}
+
+.input-field>label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+/* --------- add toilet button styling --------- */
+/*Kornelia, Jozsef*/
+.btn, .btn-large, .btn-small {
+  background: linear-gradient(90deg, rgba(61, 0, 203, 1) 38%, rgba(0, 134, 255, 1) 79%, rgba(0, 159, 255, 1) 100%);
+}
+
+.modal .modal-footer {
+  text-align: center;
+  padding: 0px;
+}
+
+#waves-effect {
+  margin-top: 20vh;
+}
+
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+}
+
+/* --------- Style the links inside the navigation bar --------- */
+.tabbar a {
+  display: inline-block;
+  color: var(--text-color-dark);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* --------- Change the color of links on hover --------- */
+.tabbar a:hover {
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
+}
+
+/* --------- Add a color to the active/current link --------- */
+.tabbar a.active {
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  width: 10px;
+  background-color: #f1f1f4;
+}
+
+/* --------- safety tips background --------- */
+/*Kornelia*/
+#safetyTips {
+  overflow: auto;
+}
+
+.bckg_st {
+  height: 100%;
+  z-index: -30;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.bckg_st {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0.7;
+}
+
+/* --------- toilet paper shape --------- */
+/*Kornelia, Ignas*/
+.holder {
+  margin-left: 20px;
+  z-index=-10;
+  margin-top: 11px;
+}
+
+.top {
+  width: 74%;
+  height: 200px;
+  background: #fff;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-left: 15%;
+  position: absolute;
+  top: 160px;
+  background-color: #ffffff;
+}
+
+.top h2 {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 40px;
+  padding: 10px;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 18px;
+  color: #33313b;
+}
+
+.top h3 {
+  text-align: center;
+  position: relative;
+  top: 10px;
+  padding-top: 20px;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 16px;
+  color: #33313b;
+  margin-left: 60px;
+}
+
+.box h3 {
+  position: absolute;
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 17px;
+  color: #536569;
+}
+
+h4 {
+  padding-top: 0px;
+  text-align: center;
+  position: relative;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 17px;
+  color: #bdbdbd;
+  letter-spacing: 2px;
+}
+
+.box {
+  width: 74%;
+  height: 235px;
+  background: #fff;
+  margin-left: 15%;
+  position: absolute;
+  top: 5px;
+  position: absolute;
+  background-color: #ffffff;
+}
+
+#tip1 {
+  margin-top: -21px;
+  margin-bottom: 50px;
+}
+
+/* --------- Effect - shadow on the bottom ---------
+ Credit the author: CSS3 Box Shadows Effects
+A PEN BY Halil İbrahim Nuroğlu
+codepen.io
+--------- */
+.effect3 {
+  position: relative;
+}
+
+.effect3:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width: 300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+#tip2, #tip3, #tip4, #tip5 {
+  height: 0px;
+  visibility: hidden;
+  transition: all 2s ease;
+  overflow: hidden;
+}
+
+/* --------- taping icon animation --------- */
+/*Kornelia, Ignas */
+.tap {
+  position: relative;
+  margin-left: -5px;
+  margin-top: -15px;
+  width: 10%;
+  top: 150px;
+  opacity: 0.3;
+}
+
+.bounce {
+  animation: bounce 3s 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: scale(1.0);
+  }
+
+  40% {
+    transform: scale(1.2);
+  }
+
+  60% {
+    transform: scale(1.3);
+  }
+}
+
+/* -------------------- */
+/* ---------- page styling ---------- */
+.page {
+  display: none;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 110px);
+  background: var(--color-light);
+  animation: fadeIn 0.4s;
+  /* padding equals height of tabbar and topbar */
+  padding: 55px 0;
+}
+
+/* ---------- fade in ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/*Kornelia, Ignas, Jozsef*/
+@media only screen and (min-width: 1024px) {
+  .tabbar, #filters {
+    max-width: 60vw;
+    left: 20vw;
+  }
+
+  .centerMe {
+    height: 6vw;
+    width: 6vw;
+    right: 1.5vw;
+  }
+
+  .centerMe:hover {
+    width: 7vw;
+    height: 7vw;
+    bottom: 49vh;
+    right: 1vw;
+  }
+
+  .box {
+    max-width: 20vw;
+  }
+}
