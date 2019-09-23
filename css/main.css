@@ -430,16 +430,20 @@ body::-webkit-scrollbar-thumb {
   margin-left: 60px;
 }
 
+.box p {
+  text-align: center;
+}
+
 .box h3 {
   position: absolute;
   padding-top: 20px;
   margin-top: 20px;
   padding-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Proza Libre', sans-serif;
+
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   color: #536569;
+  text-align: center;
 }
 
 h4 {
@@ -461,6 +465,7 @@ h4 {
   top: 5px;
   position: absolute;
   background-color: #ffffff;
+  text-align: center;
 }
 
 #tip1 {
@@ -557,7 +562,7 @@ codepen.io
 }
 
 /*Kornelia, Ignas, Jozsef*/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 800px) {
   .tabbar, #filters {
     max-width: 60vw;
     left: 20vw;
@@ -577,6 +582,27 @@ codepen.io
   }
 
   .box {
-    max-width: 20vw;
+    max-width: 40vw;
+    text-align: center;
+    left: 15vw;
+  }
+
+  .box h3 {
+    width: 35vw;
+    margin-left: 2vw;
+  }
+
+  .top {
+    max-width: 40vw;
+    left: 15vw;
+  }
+
+  .holder {
+    width: 800px;
+  }
+
+  .input-field{
+    max-width: 50vw;
+    margin: 0 auto 30px;
   }
 }
